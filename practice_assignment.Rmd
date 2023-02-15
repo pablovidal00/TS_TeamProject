@@ -1,0 +1,52 @@
+---
+title: "practice_assignment"
+author: 
+  -   "Pablo Vidal Fernández"
+  -   "Cripto Ignacio Díez Ruiz"
+  -   "Jialian Zhou He"
+  -   "Carlos Roldán Piñero"
+  
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F, 
+                      message = F)
+```
+
+```{r, echo = F, results = "hide"}
+if(!require(fpp2)){
+  install.packages("fpp2")
+}
+
+if(!require(fpp3)){
+  install.packages("fpp3")
+}
+
+if(!require(ggplot2)){
+  install.packages("ggplot2")
+}
+
+library(fpp2)
+library(fpp3)
+library(ggplot2)
+```
+
+
+## Exercise 1 
+
+Use the appropiate graphics functions, explore features from the following time series: **bicoal**, **bricksq**, **hsales**, **ibmclose**, **Internet**, **writing**.
+
+-   Can you spot any seasonality, cyclicity and trend?
+
+-   What do you learn about the time series?
+
+-   Justify the choice of the graphic function. 
+
+### Bicoal TS
+
+```{r}
+plot.ts(bicoal)
+```
+
